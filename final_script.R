@@ -50,17 +50,23 @@ smiles_strings <- as.character(odor_data$nonStereoSMILES)
 # Parse the SMILES strings into molecule objects
 mols <- parse.smiles(smiles_strings)
 
+mols
+
 # Generate 'Circular' (ECFP6) fingerprints - standard for scent prediction
 fps <- lapply(mols, get.fingerprint, type='circular')
+
+fps
 
 # Convert the list of fingerprints into a binary matrix for AdaSampling
 # Each column is a specific chemical substructure bit
 feature_matrix <- fp.to.matrix(fps)
 
+feature_matrix
+
 ################# Positive Unlabled Learning ##########################
 
 
-# 5. Create the PU (Positive-Unlabeled) Setup
+# Create the PU (Positive-Unlabeled) Setup
 set.seed(42)
 pos_indices <- which(true_labels == 1)
 
