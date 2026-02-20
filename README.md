@@ -12,7 +12,7 @@ The [`AdaSampling` package](https://cran.r-project.org/web/packages/AdaSampling/
 
 The [dataset](https://www.kaggle.com/datasets/aryanamitbarsainyan/multi-labelled-smiles-odors-dataset/data) used for this project is of 4,983 molecules designed to replicate the ["Principal Odor Map" (OpenPOM)](https://github.com/BioMachineLearning/openpom) research. By merging the [GoodScents](http://www.thegoodscentscompany.com/) and [Leffingwell PMP 2001](https://zenodo.org/records/4085098#.YqoYk8jMIUE) databases, each molecule is able to be mapped to multiple descriptors like "floral" or "chocolate".
 
-The features are created by parsing the chemical structures processed in [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System) format, using the `rcdk` [(Chemistry Development Kit) package](https://cran.r-project.org/web/packages/rcdklibs/index.html) into a [ECFP6 Circular Fingerprints](https://pubmed.ncbi.nlm.nih.gov/20426451/#:~:text=Abstract,been%20presented%20in%20the%20literature.)matrix.
+The features are created by parsing the chemical structures processed in [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System) format, using the `rcdk` [(Chemistry Development Kit) package](https://cran.r-project.org/web/packages/rcdklibs/index.html) into a [ECFP6 Circular Fingerprints](https://pubmed.ncbi.nlm.nih.gov/20426451/#:~:text=Abstract,been%20presented%20in%20the%20literature.) matrix.
 
 For the PU Simulation, "floral" was designated as the target, and 30% of the known floral molecules were hid (1 -\> 0) to test the recovery power of the algorithms.
 
