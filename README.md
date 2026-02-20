@@ -14,7 +14,7 @@ The [dataset](https://www.kaggle.com/datasets/aryanamitbarsainyan/multi-labelled
 
 The features are created by parsing the chemical structures processed in [SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System) format, using the `rcdk` [(Chemistry Development Kit) package](https://cran.r-project.org/web/packages/rcdklibs/index.html) into a [ECFP6 Circular Fingerprints](https://pubmed.ncbi.nlm.nih.gov/20426451/#:~:text=Abstract,been%20presented%20in%20the%20literature.) matrix.
 
-For the PU Simulation, "floral" was designated as the target, and 30% of the known floral molecules were hid (1 -\> 0) to test the recovery power of the algorithms.
+For the PU Simulation, "floral" was designated as the target, and 30% of the known floral molecules were hid (1 -\> 0) to test the recovery power of the algorithms. The purpose of this was to see if the model could recover hidden positives that were intentionally mislabeled as 0.
 
 ### **Model Evaluation**
 
